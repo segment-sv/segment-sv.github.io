@@ -50,11 +50,12 @@
         });
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
-        });
+        },{},{integrations: {
+            All: false, 
+            'Pinterest': false,
+             'Google Analytics': true);
       }
 </script>
-}); //coding is hard part 3
-      }           
-</script>
+
 </body> 
 </html>
