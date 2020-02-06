@@ -48,14 +48,13 @@
             email: email, 
             name: fullname
         });
-        analytics.track('destination submitted', user, function() {
-            window.location.href = "";
-        }, {
-        integrations: {
-            All: false, 
-            'Pinterest': false,
-             'Google Analytics': true
-  } //coding is hard
+      analytics.track('destination submitted', {}, {
+  integrations: {
+    'All': false, 
+   'Pinterest': false,
+    'Google Analytics': true
+    }
+}); //coding is hard part 2
         });
       }           
 </script>
