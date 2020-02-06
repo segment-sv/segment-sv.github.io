@@ -47,7 +47,12 @@
         analytics.identify('1234', {
             email: email, 
             name: fullname
-        });
+        }
+       integrations: {
+                    All: false,
+                    'Google Analytics': true,
+                          'Pinterest': false
+                    },);
         analytics.track('sortby_clicked', user, function() {
             window.location.href = "";
         });
