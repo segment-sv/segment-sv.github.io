@@ -21,7 +21,9 @@ if (!window.analytics.initialize && !window.segmentIsLoading) {
  window.analytics.page()
         var link = document.getElementsByClassName('btn');
 analytics.trackLink(link, 'CTA button click', {
-text: document.getElementsByClassName('btn').textContent
+text: document.getElementsByClassName('btn').textContent,
+plan: 'Premium',
+price: '99.00'
 });
 </script>
 
@@ -33,7 +35,7 @@ text: document.getElementsByClassName('btn').textContent
      What is your favorite travel destination?
     <input name="destination" required="" size="81" type="text"/> 
     <a href="https://segment-sv.github.io/">Visit W3Schools</a>
-   <button type="button" class="btn">Click Me!</button>
+   <button type="button" class="btn">Click Me Test!</button>
     <br><br><br> 
     Any recommendations (cool things to do, places to visit or restaurants to eat)? 
     <br><br> 
