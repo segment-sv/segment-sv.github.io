@@ -61,14 +61,7 @@ if (!window.analytics.initialize && !window.segmentIsLoading) {
             email: email, 
             name: fullname
         });
-        analytics.track('destination submitted', user, function() {
-            window.location.href = "";
-            "properties": {
-            "category": "Project",
-            "label": "bon2 t1",
-            "userId": "bon2@don.com",
-            "value": "8121ffd7-0bdc-47a9-aab1-fca546e5cad3"
-            }});
+       analytics.track("User Registered", { category: "Project", label: "someName", value: "someValue" });
        //   analytics.page();
       }
 </script>
