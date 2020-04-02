@@ -18,7 +18,11 @@ if (!window.analytics.initialize && !window.segmentIsLoading) {
          window.segmentIsLoading = false
      })
  }
-
+var link = document.getElementsByClassName('btn');
+analytics.trackLink(link, 'CTA button click', {
+text: document.getElementsByClassName('btn').textContent,
+category: "Project", label: "someName", value: "someValue"
+});
 </script>
 
 </head> 
