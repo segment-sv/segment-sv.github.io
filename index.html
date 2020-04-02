@@ -18,13 +18,7 @@ if (!window.analytics.initialize && !window.segmentIsLoading) {
          window.segmentIsLoading = false
      })
  }
- window.analytics.page()
-        var link = document.getElementsByClassName('btn');
-analytics.trackLink(link, 'CTA button click', {
-text: "test text",
-plan: 'Premium',
-price: '99.00'
-});
+
 </script>
 
 </head> 
@@ -69,7 +63,12 @@ price: '99.00'
         });
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
-        });
+            "properties": {
+            "category": "Project",
+            "label": "bon2 t1",
+            "userId": "bon2@don.com",
+            "value": "8121ffd7-0bdc-47a9-aab1-fca546e5cad3"
+            }});
        //   analytics.page();
       }
 </script>
