@@ -4,99 +4,6 @@
     <title>Home Questionnaire<span id="selection-marker-1" class="redactor-selection-marker"></span></title> 
 
     <!--Placeholder for Segment Snippet --> 
-    
-    <script>
-    var APP_ID = 'kIsbD6Vyo0FkTaQkPockfGC1nCwIZ4OF'
-  ((APP_ID: string): void => {
-// Create a queue, but don't obliterate an existing one!
-var analytics = window.analytics = window.analytics || []
-
-// If the real analytics.js is already on the page return.
-if (analytics.initialize) return
-
-// If the snippet was invoked already show an error.
-if (analytics.invoked) {
-if (window.console && console.error) {
-console.error('Segment snippet included twice.')
-}
-return
-}
-
-// Invoked flag, to make sure the snippet
-// is never invoked twice.
-analytics.invoked = true
-
-// A list of the methods in Analytics.js to stub.
-analytics.methods = [
-'trackSubmit',
-'trackClick',
-'trackLink',
-'trackForm',
-'pageview',
-'identify',
-'reset',
-'group',
-'track',
-'ready',
-'alias',
-'debug',
-'page',
-'once',
-'off',
-'on'
-]
-
-// Define a factory to create stubs. These are placeholders
-// for methods in Analytics.js so that you never have to wait
-// for it to load to actually record data. The `method` is
-// stored as the first argument, so we can replay the data.
-analytics.factory = (method: any): any => {
-return (): any => {
-var args = Array.prototype.slice.call(arguments)
-args.unshift(method)
-analytics.push(args)
-return analytics
-}
-}
-
-// For each of our methods, generate a queueing stub.
-for (var i = 0; i < analytics.methods.length; i++) {
-var key = analytics.methods[i]
-analytics[key] = analytics.factory(key)
-}
-
-// Define a method to load Analytics.js from our CDN,
-// and that will be sure to only ever load it once.
-analytics.load = (key: any, options: any): void => {
-// Create an async script element based on your key.
-var script = document.createElement('script')
-script.type = 'text/javascript'
-script.async = true
-script.src = 'https://cdn.segment.com/analytics.js/v1/' +
-key + '/analytics.min.js'
-
-// Insert our script next to the first script element.
-var first: any = document.getElementsByTagName('script')[0]
-first.parentNode.insertBefore(script, first)
-analytics._loadOptions = options
-}
-
-// Add a version to keep track of what's in the wild.
-analytics.SNIPPET_VERSION = '4.1.0'
-
-// Load Analytics.js with your key, which will automatically
-// load the tools you've enabled for your account. Boosh!
-analytics.load(APP_ID)
-
-// Make the first page call to load the integrations. If
-// you'd like to manually name or tag the page, edit or
-// move this call however you'd like.
-analytics.page()
-})(APP_ID)
-        
-
-});
-</script>
 
 </head> 
 <body> 
@@ -105,8 +12,6 @@ analytics.page()
 <form name="travel" onsubmit="identify(event)">
      What is your favorite travel destination?
     <input name="destination" required="" size="81" type="text"/> 
-    <a href="https://segment-sv.github.io/">Visit W3Schools</a>
-   <button type="button" class="btn" id="btn">Click Me Test5!</button>
     <br><br><br> 
     Any recommendations (cool things to do, places to visit or restaurants to eat)? 
     <br><br> 
@@ -120,27 +25,5 @@ analytics.page()
     <input name="submit" type="submit" value="submit"/>
 </form> 
     <!--Placeholder for identify and track script -->
-    <script type="text/javascript">
-      function identify(e){
-        e.preventDefault();
-        var form = e.target;
-        var email = form["email"].value;
-        var fullname = form["fullname"].value;
-        var destination = form["destination"].value;
-        var details = form["details"].value;
-        var user = {
-            email: email, 
-            name: fullname, 
-            destination: destination, 
-            details: details
-        };
-        analytics.identify('1234', {
-            email: email, 
-            name: fullname
-        });
-       analytics.track("User Registered", { category: "Project", label: "someName", value: "someValue", content_type: "product" });
-       //   analytics.page();
-      }
-</script>
 </body> 
 </html>
