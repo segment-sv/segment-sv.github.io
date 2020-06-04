@@ -1,118 +1,183 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-    <title>Home Questionnaire5<span id="selection-marker-1" class="redactor-selection-marker"></span></title> 
- 
-    <!--Placeholder for Segment Snippet --> 
-  <script type="text/javascript">
-  (function(){
+	
+    <title>Home Questionnaire<span id="selection-marker-1" class="redactor-selection-marker"></span></title> 	
+	
+	
+<!-- SEGMENT-->
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var t=analytics.methods[e];analytics[t]=analytics.factory(t)}analytics.load=function(e,t){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+e+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=t};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("kIsbD6Vyo0FkTaQkPockfGC1nCwIZ4OF");
+  analytics.page();
+   //analytics.page({}, { anonymousId: 'ABC-123-XYZ' });
+  //analytics.debug();
+  }}();
+</script>	
+<!-- SEGMENT-->
 
-    // Create a queue, but don't obliterate an existing one!
-    var analytics = window.analytics = window.analytics || [];
-
-    // If the real analytics.js is already on the page return.
-    if (analytics.initialize) return;
-
-    // If the snippet was invoked already show an error.
-    if (analytics.invoked) {
-      if (window.console && console.error) {
-        console.error('Segment snippet included twice.');
-      }
-      return;
-    }
-
-    // Invoked flag, to make sure the snippet
-    // is never invoked twice.
-    analytics.invoked = true;
-
-    // A list of the methods in Analytics.js to stub.
-    analytics.methods = [
-      'trackSubmit',
-      'trackClick',
-      'trackLink',
-      'trackForm',
-      'pageview',
-      'identify',
-      'reset',
-      'group',
-      'track',
-      'ready',
-      'alias',
-      'debug',
-      'page',
-      'once',
-      'off',
-      'on'
-    ];
-
-    // Define a factory to create stubs. These are placeholders
-    // for methods in Analytics.js so that you never have to wait
-    // for it to load to actually record data. The `method` is
-    // stored as the first argument, so we can replay the data.
-    analytics.factory = function(method){
-      return function(){
-        var args = Array.prototype.slice.call(arguments);
-        args.unshift(method);
-        analytics.push(args);
-        return analytics;
-      };
-    };
-
-    // For each of our methods, generate a queueing stub.
-    for (var i = 0; i < analytics.methods.length; i++) {
-      var key = analytics.methods[i];
-      analytics[key] = analytics.factory(key);
-    }
-
-    // Define a method to load Analytics.js from our CDN,
-    // and that will be sure to only ever load it once.
-    analytics.load = function(key, options){
-      // Create an async script element based on your key.
-      var script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.async = true;
-      script.src = 'https://cdn.segment.com/analytics.js/v1/'
-        + key + '/analytics.min.js';
-
-      // Insert our script next to the first script element.
-      var first = document.getElementsByTagName('script')[0];
-      first.parentNode.insertBefore(script, first);
-      analytics._loadOptions = options;
-    };
-
-    // Add a version to keep track of what's in the wild.
-    analytics.SNIPPET_VERSION = '4.1.0';
-
-    // Load Analytics.js with your key, which will automatically
-    // load the tools you've enabled for your account. Boosh!
-    analytics.load("kIsbD6Vyo0FkTaQkPockfGC1nCwIZ4OF");
-
-    // Make the first page call to load the integrations. If
-    // you'd like to manually name or tag the page, edit or
-    // move this call however you'd like.
-    analytics.page();
-  })(kIsbD6Vyo0FkTaQkPockfGC1nCwIZ4OF);
-
+<!-- TOGGLE-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").toggle(1000);
+  });
+});
 </script>
+<!-- TOGGLE-->
+	
+<!-- TOGGLE-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+</style>
+<!-- TOGGLE-->
+	
+	
 </head> 
 <body> 
+	
 <h1>What is your favorite place to travel?</h1> 
-<p>I am building a directory of the sweetest travel destinations.</p>  
+<p>I am building a directory of the sweetest travel destinations.</p>  
 <form name="travel" onsubmit="identify(event)">
-     What is your favorite travel destination?
-    <input name="destination" required="" size="81" type="text"/> 
-    <br><br><br> 
-    Any recommendations (cool things to do, places to visit or restaurants to eat)? 
-    <br><br> 
-    <textarea cols="81" name="details" required="" rows="10">
-    </textarea> 
-    <br><br> 
-    Name: <input name="fullname" required="" size="75" type="text"/> 
-    <br><br> 
-    Email: <input name="email" required="" size="75" type="email"/> 
-    <br><br>
-    <input name="submit" type="submit" value="submit"/>
+     What is your favorite travel destination?
+    <input name="destination" required="" size="81" type="text"/> 
+    <br><br><br> 
+    Any recommendations (cool things to do, places to visit or restaurants to eat)? 
+    <br><br> 
+    <textarea cols="81" name="details" required="" rows="10">
+    </textarea> 
+    <br><br> 
+    Name: <input name="fullname" required="" size="75" type="text"/> 
+    <br><br> 
+    Email: <input name="email" required="" size="75" type="email"/> 
+    <br><br>
+    <input name="submit" type="submit" value="submit"/>
 </form> 
-    <!--Placeholder for identify and track script -->
+<script type="text/javascript">
+      function identify(e){
+        e.preventDefault();
+        var form = e.target;
+        var email = form["email"].value;
+        var fullname = form["fullname"].value;
+        var destination = form["destination"].value;
+        var details = form["details"].value;
+        var user = {
+            email: email, 
+            name: fullname, 
+            destination: destination, 
+            details: details
+        };
+        analytics.identify('1234', {
+            email: email, 
+            name: fullname
+        });
+	      	//analytics.on('identify', function(userid, traits, options) {
+		 //console.log(userid, traits, options)
+//});
+        analytics.track('destination submitted', user, function() {
+            window.location.href = "";
+        });
+	      	analytics.on('track', function(event, properties, options) {
+		console.log(event, properties, options)
+});
+
+	      	   analytics.page('2nd Page', user, function() {
+            window.location.href = "";
+        });
+
+	      	//analytics.on('page', function(properties, options) {
+		 //console.log(properties, options)
+//});
+      }
+</script>
+
+	
+<button>Toggle between hide and show for a p element</button>
+<p>This is a paragraph.</p>
+	
+<h2>Toggle Switch</h2>
+
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider"></span>
+</label>
+
+<label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider"></span>
+</label><br><br>
+
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
+<label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
+
+<form class="sign-up-component" action="https://prigiattiperrut.github.io/" method="POST" id="demoForm"><input type="email" name="email" placeholder="ENTER YOUR WORK EMAIL"><button type="button">REQUEST A DEMO</button></form>
+	
 </body> 
 </html>
