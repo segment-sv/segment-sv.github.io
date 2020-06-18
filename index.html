@@ -113,43 +113,7 @@ input:checked + .slider:before {
     <br><br>
     <input name="submit" type="submit" value="submit"/>
 </form> 
-<script type="text/javascript">
-      function identify(e){
-        e.preventDefault();
-        var form = e.target;
-        var email = form["email"].value;
-        var fullname = form["fullname"].value;
-        var destination = form["destination"].value;
-        var details = form["details"].value;
-        var user = {
-            email: email, 
-            name: fullname, 
-            destination: destination, 
-            details: details
-        };
-        analytics.identify('1234', {
-            email: email, 
-            name: fullname
-        });
-	      	//analytics.on('identify', function(userid, traits, options) {
-		 //console.log(userid, traits, options)
-//});
-        analytics.track('destination submitted', user, function() {
-            window.location.href = "";
-        });
-	      	analytics.on('track', function(event, properties, options) {
-		console.log(event, properties, options)
-});
 
-	      	   analytics.page('2nd Page', user, function() {
-            window.location.href = "";
-        });
-
-	      	//analytics.on('page', function(properties, options) {
-		 //console.log(properties, options)
-//});
-      }
-</script>
 
 	
 <button>Toggle between hide and show for a p element</button>
