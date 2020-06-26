@@ -2,7 +2,7 @@
 <html> 
 <head> 
 	
-    <title>Home Questionnaire6</title> 	
+    <title>Home Questionnaire65</title> 	
 	
 	
 <!-- SEGMENT-->
@@ -94,27 +94,36 @@ input:checked + .slider:before {
 	
 	
 </head> 
-<body> 
-	
-<h1>What is your favorite place to travel6?</h1> 
-<p>I am building a directory of the sweetest travel destinations.</p>  
-<form name="travel" onsubmit="identify(event)">
-     What is your favorite travel destination?
-    <input name="destination" required="" size="81" type="text"/> 
-    <br><br><br> 
-    Any recommendations (cool things to do, places to visit or restaurants to eat)? 
-    <br><br> 
-    <textarea cols="81" name="details" required="" rows="10">
-    </textarea> 
-    <br><br> 
-    Name: <input name="fullname" required="" size="75" type="text"/> 
-    <br><br> 
-    Email: <input name="email" required="" size="75" type="email"/> 
-    <br><br>
-    <input name="submit" type="submit" value="submit"/>
-</form> 
+<body>
+    <p><a href="https://app.segment.com/segment-irina.gorelik/sources/javascript/overview">Source: Main Javascript</a></p> 
+    <p><a href="/page1.html?ajs_uid=123456789abcd&ajs_event=Clicked%20Email&ajs_aid=abc123&ajs_prop_emailCampaign=First+Touch&ajs_trait_name=Karl+Jr">Page 1 visit</a></p> 
 
-<script type ="text/javascript">
+<p>Date updated: May 21 - 1</p>
+<section id="contact">
+<h1>What is your favorite place to travel?</h1> 
+<p>I am building a directory of the sweetest travel destinations.</p>  
+<form method="POST" name="travel" onsubmit="identify(event)" action="/thankyou.html">
+     What is your favorite travel destination?
+    <input name="destination" required="" size="81" type="text"/> 
+    <br><br><br> 
+    Any recommendations (cool things to do, places to visit or restaurants to eat)? 
+    <br><br> 
+    <textarea cols="81" name="details" required="" rows="10">
+    </textarea> 
+    <br><br> 
+    Name: <input name="fullname" required="" size="75" type="text"/> 
+    <br><br> 
+    Email: <input name="email" required="" size="75" type="email"/> 
+    <br><br>
+    <input name="submit" type="submit" value="submit"/>
+<!--content security policy example
+<meta
+            http-equiv="Content-Security-Policy"
+            content="connect-src 'self' https://api.segment.io https://api-iam.intercom.io wss://nexus-websocket-a.intercom.io https://api.stg-koho.ca https://sentry.io https://assets.ua.gpsrv.com https://assets.koho.ca https://api.staging.pungle.co https://sdk.iad-01.braze.com; style-src 'self' 'unsafe-inline' http://maxcdn.bootstrapcdn.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.segment.com https://widget.intercom.io https://js.intercomcdn.com https://js.appboycdn.com; font-src 'self' https://js.intercomcdn.com http://maxcdn.bootstrapcdn.com; img-src 'self' https://static.intercomassets.com data: https://*.koho.ca https://*.amazonaws.com https://appboy-images.com; frame-src https://koho-iframe.private.fin.ag https://alpha-app.stg-koho.ca; media-src https://js.intercomcdn.com; default-src 'self'"
+        />-->
+</form>
+</section>
+    <script type="text/javascript">
       function identify(e){
         e.preventDefault();
         var form = e.target;
@@ -139,48 +148,6 @@ input:checked + .slider:before {
             window.location.href = "";
         });
       }
-	</script>
-	
-<button>Toggle between hide and show for a p element</button>
-<p>This is a paragraph.</p>
-	
-<h2>Toggle Switch</h2>
-
-<label class="switch">
-  <input type="checkbox">
-  <span class="slider"></span>
-</label>
-
-<label class="switch">
-  <input type="checkbox" checked>
-  <span class="slider"></span>
-</label><br><br>
-
-<label class="switch">
-  <input type="checkbox">
-  <span class="slider round"></span>
-</label>
-
-<label class="switch">
-  <input type="checkbox" checked>
-  <span class="slider round"></span>
-</label>
-
-<form class="sign-up-component" action="https://prigiattiperrut.github.io/" method="POST" id="demoForm">
-	<input type="email" name="email" placeholder="ENTER YOUR WORK EMAIL">
-	<!-- <button type="button">REQUEST A DEMO</button> -->
-	<input type="submit" value="REQUEST A DEMO">
-</form>
-<h2>HTML Forms</h2>
-
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-</form> 
-
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
-	</body> 
+    </script>
+</body> 
 </html>
