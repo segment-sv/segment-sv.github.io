@@ -2,7 +2,7 @@
 <html> 
 <head> 
 	
-    <title>2UPDATED</title> 	
+    <title>3UPDATED</title> 	
 	
 	
 <!-- SEGMENT-->
@@ -115,6 +115,8 @@ input:checked + .slider:before {
     <br><br> 
     Email: <input name="email" required="" size="75" type="email"/> 
     <br><br>
+    Account Status <input name="accountStatus" required="" size="75" type="text"/> 
+    <br><br>
     <input name="submit" type="submit" value="submit"/>
 <!--content security policy example
 <meta
@@ -127,6 +129,7 @@ input:checked + .slider:before {
       function identify(e){
         e.preventDefault();
         var form = e.target;
+	var accountStauts = form["accountStatus"].value;
         var email = form["email"].value;
         var fullname = form["fullname"].value;
         var destination = form["destination"].value;
@@ -137,10 +140,10 @@ input:checked + .slider:before {
             destination: destination, 
             details: details
         };
-        analytics.identify('1111-device', {
+        analytics.identify('2222-device', {
             email: email, 
             name: fullname,
-	    accountStatus: "TEST!@#$@@$"
+	    accountStatus: accountStatus
         });
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
